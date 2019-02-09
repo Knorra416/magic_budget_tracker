@@ -1,4 +1,4 @@
 # local data files
-.csv
+*.csv
 .idea/
 venv/
