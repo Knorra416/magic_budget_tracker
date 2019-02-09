@@ -19,7 +19,8 @@ and a config for the cards you are building towards.
 The output is a string with your percentage status to the goal and
 the values used to calculate for each card. 
 
-`You are 12% of the way to your goal! Card Prices: {'Liliana of the Veil': 69.36, 'Liliana, the Last Hope': 45.64} and Total: 253.72000000000003`
+`You are 12% of the way to your goal! Card Prices: 
+{'Liliana of the Veil': 69.36, 'Liliana, the Last Hope': 45.64} and Total: 253.72`
 
 This function uses the excellent `Scrython` library which can be found 
 [here](https://github.com/NandaScott/Scrython).
