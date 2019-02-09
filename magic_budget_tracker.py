@@ -38,7 +38,7 @@ def goal_status(budget_file, card_config):
     percent = total_savings/total_value
     percent_pretty = "{0:.0f}%".format(percent * 100)
 
-    return f"you are {percent_pretty} of the way to your goal! Card Prices: {card_prices} and Total: {total_value}"
+    return f"You are {percent_pretty} of the way to your goal! Card Prices: {card_prices} and Total: {total_value}"
 
 
 def initialize_parser():
