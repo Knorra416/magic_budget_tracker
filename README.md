@@ -7,7 +7,8 @@ toward expensive magic cards.
 There are two inputs to this file: `-budget_file` and `-card_config`. 
 These two arguments are string paths locations to a .csv file where
 your savings are stored (a column called `Savings` should be in the file
-and a config for the cards you are building towards. 
+and a config for the cards you are building towards 
+(an example is provied in the repo under `card_file.json`). 
 
 ### Example Call
 `python magic_budget_tracking.py 
