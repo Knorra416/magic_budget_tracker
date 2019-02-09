@@ -1,2 +1,4 @@
 # local data files
 .csv
+.idea/
+venv/
