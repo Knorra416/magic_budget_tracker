@@ -2,7 +2,7 @@
 I made this function to help track my goal to getting 
 toward expensive magic cards. 
 
-![LOTV](https://goo.gl/images/8SAMVZ)
+![LOTV](liliana.jpeg)
 
 There are two inputs to this file: `-budget_file` and `-card_config`. 
 These two arguments are string paths locations to a .csv file where
