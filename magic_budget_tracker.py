@@ -1,4 +1,5 @@
 import json
+import sys
 import scrython
 import pandas as pd
 import argparse as ap
@@ -62,7 +63,7 @@ def main():
 
     output = goal_status(budget_file=file, card_config=config)
 
-    return output
+    sys.stdout.write(output)
 
 
 if __name__ == "__main__":
