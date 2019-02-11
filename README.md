@@ -8,9 +8,10 @@ There are two inputs to this file: `-budget_file` and `-card_config`.
 These two arguments are string paths locations to a .csv file where
 your savings are stored (a column called `Savings` should be in the file
 and a config for the cards you are building towards 
-(an example is provied in the repo under `card_file.json`). 
+(an example is provided in the repo under `card_file.json`). 
 
 ### Example Call
+Running this from the command line:
 `python magic_budget_tracking.py 
 -budget_file budget_saving.csv
 -card_config card_file.json`
@@ -20,8 +21,9 @@ and a config for the cards you are building towards
 The output is a string with your percentage status to the goal and
 the values used to calculate for each card. 
 
-`You are 12% of the way to your goal! Card Prices: 
-{'Liliana of the Veil': 69.36, 'Liliana, the Last Hope': 45.64} and Total: 253.72`
+`You are 20% of the way to your goal! Card Prices: 
+{'Liliana of the Veil': 69.36, 'Liliana, the Last Hope': 45.64} and 
+Total Cost: $253.72 and Total Saving: $50`
 
 This function uses the excellent `Scrython` library which can be found 
 [here](https://github.com/NandaScott/Scrython).
