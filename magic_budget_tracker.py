@@ -35,12 +35,14 @@ def goal_status(budget_file, card_config):
 
     total_value = sum(total_value_list)
 
-    percent = total_savings/total_value
+    percent = total_savings / total_value
     percent_pretty = "{0:.0f}%".format(percent * 100)
 
-    return f"You are {percent_pretty} of the way to your goal! Card Prices: {card_prices} " \
-           f"and Total Cost: ${round(total_value,2)} " \
-           f"and Total Saving: ${round(total_savings, 2)}"
+    return (
+        f"You are {percent_pretty} of the way to your goal! Card Prices: {card_prices} "
+        f"and Total Cost: ${round(total_value,2)} "
+        f"and Total Saving: ${round(total_savings, 2)}"
+    )
 
 
 def initialize_parser():
@@ -50,8 +52,16 @@ def initialize_parser():
     argparser = ap.ArgumentParser(
         description="""provide event dictionary for manual run"""
     )
-    argparser.add_argument("-budget_file", type=str, help="path to .csv with savings, needs a col named Saving")
-    argparser.add_argument("-card_config", type=str, help="path to .json with config for card names and quantity")
+    argparser.add_argument(
+        "-budget_file",
+        type=str,
+        help="path to .csv with savings, needs a col named Saving",
+    )
+    argparser.add_argument(
+        "-card_config",
+        type=str,
+        help="path to .json with config for card names and quantity",
+    )
 
     return argparser
 
