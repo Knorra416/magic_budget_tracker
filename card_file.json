@@ -1,8 +1,11 @@
 {
   "Liliana of the Veil": {
-    "Quantity": 2
-  },
-  "Liliana, the Last Hope": {
     "Quantity": 1
+  },
+  "Verdant Catacombs": {
+    "Quantity": 4
+  },
+  "Dark Confidant": {
+    "Quantity": 4
   }
 }
