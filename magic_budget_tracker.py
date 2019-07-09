@@ -5,14 +5,13 @@ import pandas as pd
 import argparse as ap
 
 
-def goal_status(budget_file, card_config):
+def file_load(budget_file, card_config):
     """
-    This returns how close to the total value of the cards in card_config based on savings in budget file
+    this function loads the csv file and json config of cards.
     :param budget_file: (string) path to .csv file
     :param card_config: (string) path to .json config file
-    :return: print statement
+    :return:
     """
-
     data = pd.read_csv(budget_file)
     assert "Saving" in data.columns, f"{data.columns} missing column named Saving"
 
@@ -21,17 +20,51 @@ def goal_status(budget_file, card_config):
     with open(card_config) as f:
         card_file = json.load(f)
 
+    return total_savings, card_file
+
+
+def get_card_prices(card_file):
+    """
+    this function uses the scrython library to get prices from listed cards
+    :param card_file:
+    :return:
+    """
     card_prices = {}
     for card in card_file:
         card_data = scrython.cards.Named(fuzzy=card)
         price = card_data.scryfallJson["prices"]["usd"]
         card_prices[card] = float(price)
 
+    return card_prices
+
+
+def total_value_calcs(card_prices, card_file):
+    """
+    this function takes card prices and the card quantities and returns a total value of each item
+    :param card_prices:
+    :param card_file:
+    :return:
+    """
     total_value_list = []
     for key, val in card_prices.items():
         quantity = card_file[key]["Quantity"]
         total = round(quantity * val, 2)
         total_value_list.append(total)
+
+    return total_value_list
+
+
+def goal_status(budget_file, card_config):
+    """
+    This returns how close to the total value of the cards in card_config based on savings in budget file
+    :param budget_file: (string) path to .csv file
+    :param card_config: (string) path to .json config file
+    :return: print statement
+    """
+
+    total_savings, card_file = file_load(budget_file, card_config)
+    card_prices = get_card_prices(card_file)
+    total_value_list = total_value_calcs(card_prices, card_file)
 
     total_value = sum(total_value_list)
 
