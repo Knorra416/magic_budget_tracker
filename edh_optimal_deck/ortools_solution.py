@@ -49,7 +49,7 @@ def main():
 
 
 def create_data_array():
-    cost = [[1, 5, 10, 15], [], [15, 5, 1, 10], []]
+    cost = [[1, 5, 10, 15], [], [15, 5, 1, 10], [1, 10, 5, 15]]
     return cost
 
 
