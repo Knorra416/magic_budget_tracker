@@ -40,10 +40,10 @@ all_costs = [[1, 5, 10, 15], [], [15, 5, 1, 10], []]
 
 row_ind, col_ind = linear_sum_assignment(all_costs)
 
-print(f"The optimal column index is: {col_ind}")
+print(f"The optimal column index is: {row_ind}")
 
 optimal_commanders_order = []
-for i in col_ind:
+for i in row_ind:
     optimal_commanders_order.append(commanders[i])
 
 print(
