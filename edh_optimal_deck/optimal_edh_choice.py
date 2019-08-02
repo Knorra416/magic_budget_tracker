@@ -9,12 +9,12 @@ commanders = {
 
 Alex = ["Kadena, Sinking Sorceror", "Ghired, Conclave Exile", "Angie Falkenrath", "Sevinne, the Chronoclasm"]
 Adam = []
-George = []
+George = ["Angie Falkenrath", "Ghired, Conclave Exile", "Sevinne, the Chronoclasm", "Kadena, Sinking Sorceror"]
 Mike = []
 
 friends = ["Alex", "Adam", "George", "Mike"]
 
-all_rankings = [[0, 1, 2, 3], [], [], []]
+all_rankings = [[0, 1, 2, 3], [], [2, 1, 3, 0], []]
 
 row_ind, col_ind = linear_sum_assignment(all_rankings)
 
@@ -24,4 +24,4 @@ optimal_commanders_order = []
 for i in col_ind:
     optimal_commanders_order.append(commanders[i])
 
-print(f"The optimal commander choices in {friends} order is: {optimal_commanders_order}")
+print(f"The optimal commander choices for {friends} order is: {optimal_commanders_order}")
