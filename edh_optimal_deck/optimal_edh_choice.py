@@ -12,10 +12,9 @@ Adam = []
 George = []
 Mike = []
 
-all_rankings = []
+all_rankings = [[1, 2, 3, 4], [], [], []]
 
 row_ind, col_ind = linear_sum_assignment(all_rankings)
 
-print(col_ind)
-print(row_ind)
-
+print(f"The optimal column index is: {col_ind}")
+print(f"The optimal row index is: {row_ind}")
