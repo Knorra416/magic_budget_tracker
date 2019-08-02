@@ -1,6 +1,5 @@
 from __future__ import print_function
 from ortools.graph import pywrapgraph
-import time
 
 commanders = {
     0: "Kadena, Sinking Sorceror",
@@ -55,7 +54,4 @@ def create_data_array():
 
 
 if __name__ == "__main__":
-    start_time = time.clock()
     main()
-    print()
-    print("Time =", time.clock() - start_time, "seconds")
