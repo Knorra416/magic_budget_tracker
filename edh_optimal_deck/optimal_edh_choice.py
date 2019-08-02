@@ -34,9 +34,14 @@ George = [
     "Sevinne, the Chronoclasm",
     "Kadena, Sinking Sorceror",
 ]
-Mike = []
+Mike = [
+    "Kadena, Sinking Sorceror",
+    "Anje Falkenrath",
+    "Ghired, Conclave Exile",
+    "Sevinne, the Chronoclasm"
+]
 
-all_costs = [[1, 5, 10, 15], [], [15, 5, 1, 10], []]
+all_costs = [[1, 5, 10, 15], [], [15, 5, 1, 10], [1, 10, 5, 15]]
 
 row_ind, col_ind = linear_sum_assignment(all_costs)
 
