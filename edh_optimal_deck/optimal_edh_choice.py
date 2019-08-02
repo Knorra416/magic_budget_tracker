@@ -27,7 +27,12 @@ Alex = [
     "Anje Falkenrath",
     "Sevinne, the Chronoclasm",
 ]
-Adam = []
+Adam = [
+    "Anje Falkenrath",
+    "Kadena, Sinking Sorceror",
+    "Ghired, Conclave Exile",
+    "Sevinne, the Chronoclasm"
+]
 George = [
     "Anje Falkenrath",
     "Ghired, Conclave Exile",
@@ -41,14 +46,14 @@ Mike = [
     "Sevinne, the Chronoclasm"
 ]
 
-all_costs = [[1, 5, 10, 15], [], [15, 5, 1, 10], [1, 10, 5, 15]]
+all_costs = [[1, 5, 10, 15], [5, 10, 1, 15], [15, 5, 1, 10], [1, 10, 5, 15]]
 
 row_ind, col_ind = linear_sum_assignment(all_costs)
 
-print(f"The optimal column index is: {row_ind}")
+print(f"The optimal column index is: {col_ind}")
 
 optimal_commanders_order = []
-for i in row_ind:
+for i in col_ind:
     optimal_commanders_order.append(commanders[i])
 
 print(
