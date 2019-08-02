@@ -4,7 +4,7 @@ from ortools.graph import pywrapgraph
 commanders = {
     0: "Kadena, Sinking Sorceror",
     1: "Ghired, Conclave Exile",
-    2: "Angie Falkenrath",
+    2: "Anje Falkenrath",
     3: "Sevinne, the Chronoclasm",
 }
 
