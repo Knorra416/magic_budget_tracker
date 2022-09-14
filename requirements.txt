@@ -1,7 +1,6 @@
 pandas==0.23.4
 scrython==1.6.2
 asyncio==3.4.3
-aiohttp==3.7.4
 argparse==1.4.0
 scipy==1.2.1
-ortools==7.2.6977
+ortools=9.4.1874
